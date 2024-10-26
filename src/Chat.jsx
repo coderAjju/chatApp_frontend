@@ -1,4 +1,4 @@
-// src/Chat.js
+
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import io from 'socket.io-client';
@@ -12,7 +12,6 @@ const Chat = () => {
     const username = localStorage.getItem('username') || 'Guest';
     const navigate = useNavigate();
 
-    // Fetch messages when component mounts
     const fetchMessages = async () => {
         try {
             const response = await fetch(`${import.meta.env.VITE_API_URL}/auth/api/messages/${room}`);
